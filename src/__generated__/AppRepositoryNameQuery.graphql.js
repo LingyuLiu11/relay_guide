@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<bff63e98abd102a73f38a8933859f609>>
+ * @generated SignedSource<<5ba6028fcbd04dd8c307de6222874b06>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -16,6 +16,7 @@ export type AppRepositoryNameQuery$data = {|
   +repository: ?{|
     +name: string,
     +id: string,
+    +url: any,
   |},
 |};
 export type AppRepositoryNameQuery = {|
@@ -58,6 +59,13 @@ var v0 = [
         "kind": "ScalarField",
         "name": "id",
         "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "url",
+        "storageKey": null
       }
     ],
     "storageKey": "repository(name:\"relay\",owner:\"facebook\")"
@@ -81,17 +89,17 @@ return {
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "91a2d37a28396eb1d7dcf20cc01b3d0d",
+    "cacheID": "b2a9166f04b84098e68878dabf571181",
     "id": null,
     "metadata": {},
     "name": "AppRepositoryNameQuery",
     "operationKind": "query",
-    "text": "query AppRepositoryNameQuery {\n  repository(owner: \"facebook\", name: \"relay\") {\n    name\n    id\n  }\n}\n"
+    "text": "query AppRepositoryNameQuery {\n  repository(owner: \"facebook\", name: \"relay\") {\n    name\n    id\n    url\n  }\n}\n"
   }
 };
 })();
 
-(node/*: any*/).hash = "4deee7d14eec0f80d897905a19774af9";
+(node/*: any*/).hash = "75bbc625b351efa2eead685e9fefe6d9";
 
 module.exports = ((node/*: any*/)/*: Query<
   AppRepositoryNameQuery$variables,

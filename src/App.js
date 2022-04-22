@@ -16,6 +16,7 @@ const RepositoryNameQuery = graphql`
     repository(owner: "facebook", name: "relay") {
       name
       id
+      url
     }
   }
 `;
@@ -43,6 +44,7 @@ function App(props) {
       <header className="App-header">
         <p>{data.repository.name}</p>
         <p>{data.repository.id}</p>
+        <p>{data.repository.url}</p>
       </header>
     </div>
   );
